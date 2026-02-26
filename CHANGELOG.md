@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/adesso-forge/adforge-shared/compare/v1.2.3...v1.2.4) (2026-02-26)
+
+
+### Bug Fixes
+
+* publish under new package name adforge-shared ([33f31a6](https://github.com/adesso-forge/adforge-shared/commit/33f31a6d8ac06cc1104f29b5a7bb6b3975d83f36))
+
 ## [1.2.3](https://github.com/adesso-forge/ds-shared/compare/v1.2.2...v1.2.3) (2026-02-26)
 
 
