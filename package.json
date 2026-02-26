@@ -1,0 +1,51 @@
+{
+  "name": "@adesso-forge/ds-shared",
+  "version": "1.0.0",
+  "description": "Shared build tooling, Storybook config, and token utilities for adesso forge",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./build/vite-config": "./dist/build/vite.config.base.js",
+    "./build/tsconfig": "./src/build/tsconfig.base.json",
+    "./storybook/main": "./dist/storybook/main.js",
+    "./storybook/preview": "./dist/storybook/preview.js",
+    "./tokens/*": "./dist/tokens/*.js",
+    "./components/*": "./dist/components/*.js"
+  },
+  "files": [
+    "dist/",
+    "src/build/tsconfig.base.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist/"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.0",
+    "@storybook/addon-essentials": "^8.6.0",
+    "@storybook/web-components-vite": "^8.6.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "lit": "^3.2.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  },
+  "peerDependencies": {
+    "@awesome.me/webawesome": "^3.2.0",
+    "lit": "^3.2.0",
+    "vite": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
