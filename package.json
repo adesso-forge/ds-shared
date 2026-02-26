@@ -1,6 +1,6 @@
 {
   "name": "@adesso-forge/ds-shared",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Shared build tooling, Storybook config, and token utilities for adesso forge",
   "type": "module",
   "main": "dist/index.js",

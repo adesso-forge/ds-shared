@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/adesso-forge/ds-shared/compare/v1.2.2...v1.2.3) (2026-02-26)
+
+
+### Bug Fixes
+
+* storybook version ([a52567e](https://github.com/adesso-forge/ds-shared/commit/a52567edb16b0cb7745b2da35079b32a55b067ae))
+* update lock ([70404ff](https://github.com/adesso-forge/ds-shared/commit/70404ffeb509d98e74fd8b39d9dfbe8cd4d0fa13))
+
 ## [1.2.2](https://github.com/adesso-forge/ds-shared/compare/v1.2.1...v1.2.2) (2026-02-26)
 
 
