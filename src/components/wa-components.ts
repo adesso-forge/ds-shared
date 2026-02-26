@@ -97,3 +97,14 @@ export const WA_FREE_COMPONENTS: WaComponentDefinition[] = [
 
 /** Quick-access array of just the component base names */
 export const WA_FREE_COMPONENT_NAMES: string[] = WA_FREE_COMPONENTS.map(c => c.name);
+
+/** Total number of free WA components */
+export const WA_FREE_COMPONENT_COUNT: number = WA_FREE_COMPONENTS.length;
+
+/** Get all components grouped by category */
+export function getComponentsByCategory(): Record<string, WaComponentDefinition[]> {
+  return WA_FREE_COMPONENTS.reduce((acc, comp) => {
+    (acc[comp.category] ??= []).push(comp);
+    return acc;
+  }, {} as Record<string, WaComponentDefinition[]>);
+}

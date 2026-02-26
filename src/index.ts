@@ -20,6 +20,8 @@ export {
 export {
   WA_FREE_COMPONENTS,
   WA_FREE_COMPONENT_NAMES,
+  WA_FREE_COMPONENT_COUNT,
+  getComponentsByCategory,
 } from './components/wa-components.js';
 export type { WaComponentDefinition } from './components/wa-components.js';
 
