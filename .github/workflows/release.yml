@@ -24,6 +24,25 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm build
+      - name: Bootstrap package on GitHub Packages (first publish only)
+        run: |
+          PKG_NAME=$(node -p "require('./package.json').name")
+          # Check if package already exists; if not, publish v0.0.0-seed to create it
+          if ! npm view "$PKG_NAME" version --registry https://npm.pkg.github.com 2>/dev/null; then
+            echo "Package $PKG_NAME not found — bootstrapping..."
+            node -e "
+              const pkg = require('./package.json');
+              pkg.version = '0.0.0-seed';
+              require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2) + '\n');
+            "
+            npm publish --registry https://npm.pkg.github.com --tag seed
+            git checkout -- package.json
+            echo "Bootstrap complete — semantic-release will now manage versions."
+          else
+            echo "Package $PKG_NAME already exists — skipping bootstrap."
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
