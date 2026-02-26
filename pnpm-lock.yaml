@@ -22,13 +22,13 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(semantic-release@25.0.3(typescript@5.9.3))
       '@storybook/addon-a11y':
-        specifier: 10.2.13
+        specifier: ^10.0.0
         version: 10.2.13(storybook@10.2.13(@testing-library/dom@10.4.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/addon-docs':
-        specifier: 10.2.13
+        specifier: ^10.0.0
         version: 10.2.13(@types/react@19.2.14)(esbuild@0.25.12)(rollup@4.59.0)(storybook@10.2.13(@testing-library/dom@10.4.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@6.4.1(@types/node@22.19.12))
       '@storybook/web-components-vite':
-        specifier: 10.2.13
+        specifier: ^10.0.0
         version: 10.2.13(esbuild@0.25.12)(lit@3.3.2)(rollup@4.59.0)(storybook@10.2.13(@testing-library/dom@10.4.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@6.4.1(@types/node@22.19.12))
       '@types/node':
         specifier: ^22.0.0
@@ -43,7 +43,7 @@ importers:
         specifier: ^25.0.0
         version: 25.0.3(typescript@5.9.3)
       storybook:
-        specifier: 10.2.13
+        specifier: ^10.0.0
         version: 10.2.13(@testing-library/dom@10.4.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       typescript:
         specifier: ^5.7.0
