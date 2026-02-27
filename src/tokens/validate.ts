@@ -56,7 +56,7 @@ export async function extractTokensFromFile(filePath: string): Promise<DesignTok
  */
 export function validateOverrides(
   overrideTokens: DesignToken[],
-  baseTokens: DesignToken[]
+  baseTokens: DesignToken[],
 ): ValidationResult {
   const baseNames = new Set(baseTokens.map((t) => t.name));
   const errors: string[] = [];
@@ -65,7 +65,7 @@ export function validateOverrides(
   for (const token of overrideTokens) {
     if (!baseNames.has(token.name)) {
       errors.push(
-        `[adesso-forge] Unknown token "${token.name}" — not found in base WA theme. Check for typos.`
+        `[adesso-forge] Unknown token "${token.name}" — not found in base WA theme. Check for typos.`,
       );
     }
   }
@@ -80,10 +80,7 @@ export function validateOverrides(
 /**
  * Computes the diff between two sets of tokens.
  */
-export function diffTokens(
-  baseTokens: DesignToken[],
-  overrideTokens: DesignToken[]
-): TokenDiff {
+export function diffTokens(baseTokens: DesignToken[], overrideTokens: DesignToken[]): TokenDiff {
   const baseMap = new Map(baseTokens.map((t) => [t.name, t.value]));
   const overrideMap = new Map(overrideTokens.map((t) => [t.name, t.value]));
 

@@ -26,12 +26,7 @@ export function createBaseConfig(options: BaseConfigOptions): UserConfig {
       },
       outDir: 'dist',
       rollupOptions: {
-        external: [
-          /^@awesome\.me\//,
-          /^@adesso-forge\//,
-          /^lit/,
-          ...external,
-        ],
+        external: [/^@awesome\.me\//, /^@adesso-forge\//, /^lit/, ...external],
         output: {
           preserveModules: true,
           preserveModulesRoot: 'src',

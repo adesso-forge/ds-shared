@@ -11,22 +11,13 @@ export interface StorybookConfigOptions {
  * Creates a shared Storybook configuration for adesso forge packages.
  * Includes viteFinal to resolve linked package dependencies from project root.
  */
-export function createStorybookConfig(
-  options: StorybookConfigOptions = {}
-): StorybookConfig {
-  const {
-    stories = ['../src/**/*.stories.ts'],
-    addons = [],
-  } = options;
+export function createStorybookConfig(options: StorybookConfigOptions = {}): StorybookConfig {
+  const { stories = ['../src/**/*.stories.ts'], addons = [] } = options;
 
   return {
     stories,
     framework: '@storybook/web-components-vite',
-    addons: [
-      '@storybook/addon-docs',
-      '@storybook/addon-a11y',
-      ...addons,
-    ],
+    addons: ['@storybook/addon-docs', '@storybook/addon-a11y', ...addons],
     async viteFinal(config) {
       const { mergeConfig } = await import('vite');
       const { join } = await import('node:path');

@@ -19,7 +19,7 @@ export function registerPassThrough(sourceTag: string, targetTag: string): void 
   if (!Source) {
     console.warn(
       `[adesso-forge] Cannot register <${targetTag}>: source <${sourceTag}> is not defined. ` +
-      `Make sure the source component is imported before calling registerPassThrough().`
+        `Make sure the source component is imported before calling registerPassThrough().`,
     );
     return;
   }
@@ -30,7 +30,7 @@ export function registerPassThrough(sourceTag: string, targetTag: string): void 
 
   customElements.define(
     targetTag,
-    class extends (Source as unknown as typeof HTMLElement) {} as unknown as CustomElementConstructor
+    class extends (Source as unknown as typeof HTMLElement) {} as unknown as CustomElementConstructor,
   );
 }
 
@@ -43,7 +43,7 @@ export function registerPassThrough(sourceTag: string, targetTag: string): void 
  */
 export async function registerPassThroughAsync(
   sourceTag: string,
-  targetTag: string
+  targetTag: string,
 ): Promise<void> {
   if (customElements.get(targetTag)) {
     return; // Already registered
@@ -53,7 +53,7 @@ export async function registerPassThroughAsync(
   const Source = customElements.get(sourceTag)!;
   customElements.define(
     targetTag,
-    class extends (Source as unknown as typeof HTMLElement) {} as unknown as CustomElementConstructor
+    class extends (Source as unknown as typeof HTMLElement) {} as unknown as CustomElementConstructor,
   );
 }
 
@@ -65,11 +65,7 @@ export async function registerPassThroughAsync(
  * @param targetPrefix - The prefix for newly registered components (e.g., 'forge' or 'alpha')
  * @param names - Array of component base names (e.g., ['button', 'card', 'input'])
  */
-export function registerAll(
-  sourcePrefix: string,
-  targetPrefix: string,
-  names: string[]
-): void {
+export function registerAll(sourcePrefix: string, targetPrefix: string, names: string[]): void {
   for (const name of names) {
     registerPassThrough(`${sourcePrefix}-${name}`, `${targetPrefix}-${name}`);
   }
