@@ -1,6 +1,6 @@
 {
   "name": "@adesso-forge/adforge-shared",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Shared build tooling, Storybook config, and token utilities for adesso forge",
   "type": "module",
   "main": "dist/index.js",

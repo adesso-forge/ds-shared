@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/adesso-forge/adforge-shared/compare/v1.3.0...v1.4.0) (2026-02-27)
+
+
+### Features
+
+* add commitlint, lint-staged, and release config exports ([96bb8e2](https://github.com/adesso-forge/adforge-shared/commit/96bb8e263b8811effa6c297737d3025ac45fb057))
+
 # [1.3.0](https://github.com/adesso-forge/adforge-shared/compare/v1.2.4...v1.3.0) (2026-02-27)
 
 
